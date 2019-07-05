@@ -18,4 +18,10 @@ First, construct a SLURM batch script, called tophat.sh, using special SLURM job
 
 #####################################################################
 
-##sbatch --array=1-30 tophat.sh
+:'sbatch --array=1-10 script.sh
+A job array with array tasks numbered from 0 to 10.
+SBATCH --array=0-31
+A job array with array tasks numbered 1, 2, 5.
+SBATCH --array=1,2,5
+A job array with array tasks numbered 1, 3, 5 and 7.
+SBATCH --array=1-7:2 '
